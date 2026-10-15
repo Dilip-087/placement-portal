@@ -1,16 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: placement-portal
+  name: placement-portal-deployment
   labels:
     app: placement-portal
 spec:
   replicas: 2
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 0
   selector:
     matchLabels:
       app: placement-portal
@@ -21,23 +16,10 @@ spec:
     spec:
       containers:
       - name: placement-portal
-        image: localhost:5001/placement-portal:v1
+        image: dilip087/placement-portal:v1
         imagePullPolicy: IfNotPresent
-
         ports:
         - containerPort: 80
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 80
-          initialDelaySeconds: 5
-          periodSeconds: 5
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 80
-          initialDelaySeconds: 10
-          periodSeconds: 10
 ---
 apiVersion: v1
 kind: Service
@@ -48,6 +30,7 @@ spec:
   selector:
     app: placement-portal
   ports:
-    - port: 80
+    - protocol: TCP
+      port: 80
       targetPort: 80
-      nodePort: 32000
+      nodePort: 30080
