@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Student Placement Portal</title>
+    <style>
+        :root { --primary: #0f172a; --secondary: #2563eb; --accent: #10b981; --bg: #f8fafc; --text: #334155; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; }
+        header { background: var(--primary); color: white; padding: 1.5rem; text-align: center; font-size: 1.5rem; font-weight: bold; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+        .card h2 { color: var(--secondary); margin-top: 0; border-bottom: 2px solid #eff6ff; padding-bottom: 0.5rem; }
+        .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: center; }
+        .stat-box { background: #f1f5f9; padding: 1rem; border-radius: 8px; font-weight: bold; }
+        .stat-box span { display: block; font-size: 1.5rem; color: var(--accent); }
+        .badge { background: #dcfce7; color: #15803d; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.85rem; font-weight: bold; }
+        footer { text-align: center; padding: 2rem; color: #94a3b8; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <header>🎓 University Automated Student Placement Portal (Stable - v1.0)</header>
+    <div class="container">
+        <!-- Live Recruitment Drives -->
+        <div class="card">
+            <h2>📢 Upcoming Drives</h2>
+            <p><strong>Google India</strong> <span class="badge">Active</span><br>Role: SDE-1 | Package: 32 LPA<br>Drive Date: Oct 28, 2026</p>
+            <p><strong>Microsoft</strong><br>Role: Cloud Engineer | Package: 28 LPA<br>Drive Date: Nov 05, 2026</p>
+        </div>
+        <!-- Placement Statistics -->
+        <div class="card">
+            <h2>📈 Placement Statistics</h2>
+            <div class="stat-grid">
+                <div class="stat-box"><span>94%</span>Placed Ratio</div>
+                <div class="stat-box"><span>45 LPA</span>Highest Package</div>
+            </div>
+        </div>
+        <!-- Eligibility Criteria -->
+        <div class="card">
+            <h2>📋 Eligibility Criteria</h2>
+            <ul>
+                <li>Minimum CGPA: 7.5 or above</li>
+                <li>No active backlogs permitted</li>
+                <li>Branches: B.Tech CSE, IT, ECE, EEE</li>
+            </ul>
+        </div>
+    </div>
+    <footer>© 2026 University Placement Cell. All rights reserved.</footer>
+</body>
+</html>
