@@ -21,8 +21,9 @@ spec:
     spec:
       containers:
       - name: placement-portal
-         image: placement-portal:v1
+        image: localhost:5001/placement-portal:v1
         imagePullPolicy: IfNotPresent
+
         ports:
         - containerPort: 80
         readinessProbe:
