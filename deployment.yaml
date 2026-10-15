@@ -21,8 +21,8 @@ spec:
     spec:
       containers:
       - name: placement-portal
-        image: DOCKERHUB_USERNAME/placement-portal:latest
-        imagePullPolicy: Always
+         image: placement-portal:v1
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
         readinessProbe:
