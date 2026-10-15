@@ -1,4 +1,4 @@
-Set-Content deployment.yaml -Value 'apiVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: placement-portal-deployment
@@ -33,4 +33,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30080'
+      nodePort: 30080
